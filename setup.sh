@@ -10,4 +10,5 @@ sudo apt-get install ctags
 sudo apt-get install silversearcher-ag
 
 # Install plugins
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.my-vim/bundle/Vundle.vim
 vim -c 'PluginInstall' -c 'qa!'

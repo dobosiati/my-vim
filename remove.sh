@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Remove folder
-rm -r ~/.my-vim
+sudo -r ~/.my-vim
 
 # Remove dependencies
 sudo apt-get remove ctags
