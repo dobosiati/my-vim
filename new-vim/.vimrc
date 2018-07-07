@@ -1,6 +1,6 @@
 set nocompatible              						"We want the latest Vim settings/options	
 
-so ~/.my-vim/plugins.vim
+so ~/.vim/plugins.vim
 
 syntax enable
 
@@ -33,10 +33,10 @@ set guioptions-=R									"Hide rightscroll bar when split
 nmap <Leader>ev :tabedit $MYVIMRC<cr>
 
 "Edit snippets
-nmap <Leader>es :e ~/.my-vim/snippets/
+nmap <Leader>es :e ~/.vim/snippets/
 
 "Make it easy to edit the Vim plugins.
-nmap <Leader>ep :tabedit ~/.my-vim/plugins.vim<cr>
+nmap <Leader>ep :tabedit ~/.vim/plugins.vim<cr>
 
 "Add simple highlight removal.
 nmap <Leader><space> :nohlsearch<cr>

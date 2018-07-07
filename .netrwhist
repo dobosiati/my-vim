@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/home/dobosiati/Downloads/editingvideos'
-let g:netrw_dirhist_2='/home/dobosiati/Work/code/test/routes'
-let g:netrw_dirhist_3='/home/dobosiati/Work/code/test'
-let g:netrw_dirhist_4='/home/dobosiati/Work/code/test/resources'
-let g:netrw_dirhist_5='/home/dobosiati/Work/code/test/resources/views'
-let g:netrw_dirhist_6='/home/dobosiati/Work/code/test/routes'
-let g:netrw_dirhist_7='/home/dobosiati/Downloads/vim'
