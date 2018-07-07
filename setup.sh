@@ -2,11 +2,11 @@
 
 touch ~/.vimrc
 
-mv ~/.vim/* ~/.my-vim/old-vim
+mv -r ~/.vim/* ~/.my-vim/old-vim
 cp -r ~/.my-vim/new-vim/* ~/.vim
 
-#mv ~/.vimrc ~/.my-vim/old-vim/.vimrc
-#mv ~/.vim/.vimrc ~/.vimrc
+mv ~/.vimrc ~/.my-vim/old-vim/.vimrc
+mv ~/.my-vim/.new-vim/.vimrc ~/.vimrc
 
 # Dependencies
 sudo apt-get install ctags
