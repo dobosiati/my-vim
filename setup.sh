@@ -2,6 +2,8 @@
 
 # Create vimrc file if it is not exist
 touch ~/.vimrc
+# Create .vim folder if it is not exist
+mkdir -p .vim
 
 # Saving current vim by copying to the my-vim folder
 mv ~/.vim/* ~/.my-vim/old-vim
