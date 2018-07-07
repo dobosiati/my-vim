@@ -1,5 +1,7 @@
 #!/bin/sh
 
+touch ~/.vimrc
+
 mv ~/.vim/* ~/.my-vim/old-vim
 cp -r ~/.my-vim/new-vim/* ~/.vim
 
