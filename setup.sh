@@ -1,5 +1,4 @@
 #!/bin/sh
-git clone https://github.com/dobosiati/my-vim.git ~/my-vim
 
 mv -r ~/.vim/* ~/.my-vim/old-vim
 cp -r ~/.my-vim/new-vim/* ~/.vim
