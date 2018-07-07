@@ -12,8 +12,8 @@ cp -r ~/.my-vim/new-vim/* ~/.vim
 
 # Save old vimrc file
 mv ~/.vimrc ~/.my-vim/old-vim/.vimrc
-# Move the new vimrc file
-mv ~/.my-vim/new-vim/.vimrc ~/.vimrc
+# Copy the new vimrc file
+cp ~/.my-vim/new-vim/.vimrc ~/.vimrc
 
 # Dependencies
 sudo apt-get install ctags
