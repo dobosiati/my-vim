@@ -1,14 +1,17 @@
 #!/bin/sh
 
-# Remove folder
-sudo -r ~/.my-vim
+# Remove new-vim files
+sudo rm -r ~/.vim/*
+
+# Restore old vim
+cp -r ~/.my-vim/old-vim/* ~/.vim
+
+# Restore old vimrc file
+cp ~/.my-vim/old-vim/.vimrc ~/.vimrc
 
 # Remove dependencies
 sudo apt-get remove ctags
 sudo apt-get remove silversearcher-ag
 
-num1=$(grep -nm1 "let &runtimepath='~/.my-vim'" ~/.vimrc |cut -f1 -d:)
-num2=$(grep -nm1 "let \$VIMHOME='~/.my-vim'" ~/.vimrc |cut -f1 -d:)
-num3=$(grep -nm1 "let \$MYVIMRC='~/.my-vim/.vimrc'" ~/.vimrc |cut -f1 -d:)
-sed -e "$num1 d;$num2 d;$num3 d;" ~/.vimrc > ~/.pre.file
-mv ~/.pre.file ~/.vimrc
+# Remove folder
+sudo rm -r ~/.my-vim

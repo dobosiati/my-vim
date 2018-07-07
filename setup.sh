@@ -1,11 +1,16 @@
 #!/bin/sh
 
+# Create vimrc file if it is not exist
 touch ~/.vimrc
 
+# Saving current vim by copying to the my-vim folder
 mv ~/.vim/* ~/.my-vim/old-vim
+# Move the new vim
 cp -r ~/.my-vim/new-vim/* ~/.vim
 
+# Save old vimrc file
 mv ~/.vimrc ~/.my-vim/old-vim/.vimrc
+# Move the new vimrc file
 mv ~/.my-vim/new-vim/.vimrc ~/.vimrc
 
 # Dependencies
