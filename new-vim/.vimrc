@@ -26,6 +26,8 @@ set guioptions-=L									"Hide leftscroll bar when split
 set guioptions-=r									"Hide rightscroll bar
 set guioptions-=R									"Hide rightscroll bar when split
 
+set whichwrap+=>,l									"Go to next line from end of line
+set whichwrap+=<,h									"Go to previous line from start of line
 
 "-------------- Mappings -----------"
 
