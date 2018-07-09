@@ -61,6 +61,7 @@ vmap <Leader>x "+x
 "/ CtrlP
 "/
 let g:ctrlp_custom_ignore = 'node_modules\|git'
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.idea/*,*/.DS_Store,*/vendor
 let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30'
 
 "Jumt to function in a file
