@@ -57,6 +57,10 @@ vmap <Leader>x "+x
 
 "Add a space in normal mode
 nnoremap <space> i<space><Esc>
+"
+"Delete back in normal mode
+nnoremap <BS> i<BS><Esc>l
+
 
 "-------------- Plugins ------------"
 
