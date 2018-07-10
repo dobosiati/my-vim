@@ -62,7 +62,7 @@ nnoremap <space> i<space><Esc>
 nnoremap <BS> i<BS><Esc>l
 
 "New line in normal mode
-nnoremap <cr> o<Esc>h
+nnoremap <cr> o<Esc>
 
 
 "-------------- Plugins ------------"
