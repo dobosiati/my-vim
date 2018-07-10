@@ -55,14 +55,14 @@ vmap <Leader>y "+y
 "Cut from system clipboard
 vmap <Leader>x "+x
 
-"Add a space in normal mode
-nnoremap <space> i<space><Esc>
-"
+"Add space in normal mode
+nmap <space> i<space><Esc>
 "Delete back in normal mode
-nnoremap <BS> i<BS><Esc>l
-
+nmap <BS> i<BS><Esc>l
 "New line in normal mode
-nnoremap <cr> o<Esc>
+nmap <cr> o<Esc> 
+"Tab in normal mode
+nmap <Tab> >>  
 
 
 "-------------- Plugins ------------"
