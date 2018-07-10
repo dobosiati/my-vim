@@ -61,6 +61,9 @@ nnoremap <space> i<space><Esc>
 "Delete back in normal mode
 nnoremap <BS> i<BS><Esc>l
 
+"New line in normal mode
+nnoremap <cr> o<Esc>h
+
 
 "-------------- Plugins ------------"
 
