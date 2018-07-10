@@ -55,7 +55,8 @@ vmap <Leader>y "+y
 "Cut from system clipboard
 vmap <Leader>x "+x
 
-
+"Add a space in normal mode
+nnoremap <space> i<space><Esc>
 
 "-------------- Plugins ------------"
 
