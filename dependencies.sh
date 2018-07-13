@@ -4,5 +4,5 @@
 sudo apt-get install ctags
 sudo apt-get install silversearcher-ag
 #Test update
-echo "test dependencies.sh"
+echo "test2 dependencies.sh"
 sudo apt-get install vim
