@@ -21,7 +21,6 @@ fi
 if [ $(stat -c%s ~/.my-vim/update/dependencies.sh) != $(stat -c%s ~/.my-vim/dependencies.sh) ]; then	
 	cp ~/.my-vim/update/dependencies.sh ~/.my-vim/dependencies.sh
 	sh ~/.my-vim/dependencies.sh
-	#Test6 update
 	echo "test update.sh (dependencies) 1"
 fi
 echo "test update.sh 2"
@@ -30,7 +29,6 @@ echo "test update.sh 2"
 if [ $(stat -c%s ~/.my-vim/update/update.sh) != $(stat -c%s ~/.my-vim/update.sh) ]; then	
 	cp ~/.my-vim/update/update.sh ~/.my-vim/update.sh
 	sh ~/.my-vim/update.sh
-	#Test2 update
 	echo "test update.sh (update) 1"
 fi
  
