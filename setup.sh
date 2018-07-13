@@ -24,4 +24,4 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim -c 'PluginInstall' -c 'qa!'
 
 # Install the dependencies in the update file
-sh update.sh
+sh ~/.my-vim/update.sh
