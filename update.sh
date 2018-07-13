@@ -21,15 +21,12 @@ fi
 if [ $(stat -c%s ~/.my-vim/update/dependencies.sh) != $(stat -c%s ~/.my-vim/dependencies.sh) ]; then	
 	cp ~/.my-vim/update/dependencies.sh ~/.my-vim/dependencies.sh
 	sh ~/.my-vim/dependencies.sh
-	echo "test update.sh (dependencies) 1"
 fi
-echo "test update.sh 2"
  
 # Compaires the new and the old update file sizes and if they are different than override the old one and run it
 if [ $(stat -c%s ~/.my-vim/update/update.sh) != $(stat -c%s ~/.my-vim/update.sh) ]; then	
 	cp ~/.my-vim/update/update.sh ~/.my-vim/update.sh
 	sh ~/.my-vim/update.sh
-	echo "test update.sh (update) 1"
 fi
  
 # Remove update folder
