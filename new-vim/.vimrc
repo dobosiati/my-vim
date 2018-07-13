@@ -1,4 +1,4 @@
-"Test5 update
+"Test6 update
 set nocompatible              						"We want the latest Vim settings/options	
 
 so ~/.vim/plugins.vim

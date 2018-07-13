@@ -1,4 +1,4 @@
-"Test5 update
+"Test6 update
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
