@@ -24,7 +24,10 @@ fi
 if [ $(stat -c%s ~/.my-vim/update/update.sh) != $(stat -c%s ~/.my-vim/update.sh) ]; then	
 	cp ~/.my-vim/update/dependencies.sh ~/.my-vim/dependencies.sh
 	sh ~/.my-vim/dependencies.sh
+	#Test update
+	echo "test update.sh 1"
 fi
+echo "test update.sh 2"
  
 # Remove update folder
 sudo rm -r ~/.my-vim/update
