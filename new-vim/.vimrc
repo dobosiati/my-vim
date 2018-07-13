@@ -62,7 +62,7 @@ nmap <BS> i<BS><Esc>l
 "New line in normal mode
 nmap <cr> o<Esc> 
 "Tab in normal mode
-nmap <Tab> >>  
+nmap <Tab> i<Tab><Esc>l
 
 
 "-------------- Plugins ------------"

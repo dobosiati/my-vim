@@ -7,9 +7,13 @@ It is my custom vim configurations.
 git clone https://github.com/dobosiati/my-vim.git ~/.my-vim && sh ~/.my-vim/setup.sh
 ```
 
+## Update changes 
+```
+sh ~/.my-vim/update.sh
+```
+ 
+## Remove  
 Remove my-vim and restore the old vim configuration:
-
-## Remove 
 ```
 sh ~/.my-vim/remove.sh
 ```
