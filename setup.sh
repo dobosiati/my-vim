@@ -15,13 +15,9 @@ mv ~/.vimrc ~/.my-vim/old-vim/.vimrc
 # Copy the new vimrc file
 cp ~/.my-vim/new-vim/.vimrc ~/.vimrc
 
-# Dependencies
-sudo apt-get install ctags
-sudo apt-get install silversearcher-ag
+# Install dependencies
+sh ~/.my-vim/dependencies.sh
 
 # Install plugins
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim -c 'PluginInstall' -c 'qa!'
-
-# Install the dependencies in the update file
-sh ~/.my-vim/update.sh

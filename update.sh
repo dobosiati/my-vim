@@ -14,9 +14,17 @@ if [ $(stat -c%s ~/.my-vim/update/new-vim/plugins.vim) != $(stat -c%s ~/.vim/plu
 	vim -c 'PluginInstall' -c 'qa!'
 fi
  
-# Here goes the new dependencies
-
-
-
+# Compaires the new and the old update file sizes and if they are different than override the old one and run it
+if [ $(stat -c%s ~/.my-vim/update/update.sh) != $(stat -c%s ~/.my-vim/update.sh) ]; then	
+	cp ~/.my-vim/update/update.sh ~/.my-vim/update.sh
+	sh ~/.my-vim/update.sh
+fi
+ 
+# Compaires the new and the old dependencies file sizes and if they are different than override the old one and run it
+if [ $(stat -c%s ~/.my-vim/update/update.sh) != $(stat -c%s ~/.my-vim/update.sh) ]; then	
+	cp ~/.my-vim/update/dependencies.sh ~/.my-vim/dependencies.sh
+	sh ~/.my-vim/dependencies.sh
+fi
+ 
 # Remove update folder
 sudo rm -r ~/.my-vim/update
