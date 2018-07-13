@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Remove update folder if exists
+sudo rm -rf ~/.my-vim/update
+
 # Git clone the latest my-vim version
 git clone https://github.com/dobosiati/my-vim.git ~/.my-vim/update
 
@@ -13,6 +16,15 @@ if [ $(stat -c%s ~/.my-vim/update/new-vim/plugins.vim) != $(stat -c%s ~/.vim/plu
 	cp ~/.my-vim/update/new-vim/plugins.vim ~/.vim/plugins.vim
 	vim -c 'PluginInstall' -c 'qa!'
 fi
+  
+# Compaires the new and the old dependencies file sizes and if they are different than override the old one and run it
+if [ $(stat -c%s ~/.my-vim/update/dependencies.sh) != $(stat -c%s ~/.my-vim/dependencies.sh) ]; then	
+	cp ~/.my-vim/update/dependencies.sh ~/.my-vim/dependencies.sh
+	sh ~/.my-vim/dependencies.sh
+	#Test5 update
+	echo "test update.sh (dependencies) 1"
+fi
+echo "test update.sh 2"
  
 # Compaires the new and the old update file sizes and if they are different than override the old one and run it
 if [ $(stat -c%s ~/.my-vim/update/update.sh) != $(stat -c%s ~/.my-vim/update.sh) ]; then	
@@ -21,15 +33,6 @@ if [ $(stat -c%s ~/.my-vim/update/update.sh) != $(stat -c%s ~/.my-vim/update.sh)
 	#Test2 update
 	echo "test update.sh (update) 1"
 fi
- 
-# Compaires the new and the old dependencies file sizes and if they are different than override the old one and run it
-if [ $(stat -c%s ~/.my-vim/update/dependencies.sh) != $(stat -c%s ~/.my-vim/dependencies.sh) ]; then	
-	cp ~/.my-vim/update/dependencies.sh ~/.my-vim/dependencies.sh
-	sh ~/.my-vim/dependencies.sh
-	#Test2 update
-	echo "test update.sh (dependencies) 1"
-fi
-echo "test update.sh 2"
  
 # Remove update folder
 sudo rm -r ~/.my-vim/update
