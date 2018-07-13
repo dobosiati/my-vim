@@ -18,6 +18,8 @@ fi
 if [ $(stat -c%s ~/.my-vim/update/update.sh) != $(stat -c%s ~/.my-vim/update.sh) ]; then	
 	cp ~/.my-vim/update/update.sh ~/.my-vim/update.sh
 	sh ~/.my-vim/update.sh
+	#Test2 update
+	echo "test update.sh (update) 1"
 fi
  
 # Compaires the new and the old dependencies file sizes and if they are different than override the old one and run it
