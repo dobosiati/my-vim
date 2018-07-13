@@ -29,5 +29,5 @@ if [ $(stat -c%s ~/.my-vim/update/update.sh) != $(stat -c%s ~/.my-vim/update.sh)
 	sh ~/.my-vim/update.sh
 fi
  
-# Remove update folder
-sudo rm -r ~/.my-vim/update
+# Remove update folder if exists
+sudo rm -rf ~/.my-vim/update

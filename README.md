@@ -2,18 +2,19 @@
 
 It is my custom vim configurations.
 
-## Install my-vim (saves the current vim configurations):
+## Install
+Saves the current vim configurations and installs my-vim:
 ```
 git clone https://github.com/dobosiati/my-vim.git ~/.my-vim && sh ~/.my-vim/setup.sh
 ```
 
-## Update changes 
+## Update 
 ```
 sh ~/.my-vim/update.sh
 ```
  
 ## Remove  
-Remove my-vim and restore the old vim configuration:
+Removes my-vim and restores the old vim configuration:
 ```
 sh ~/.my-vim/remove.sh
 ```
