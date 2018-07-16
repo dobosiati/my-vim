@@ -29,6 +29,7 @@ set guioptions-=R									"Hide rightscroll bar when split
 set whichwrap+=>,l									"Go to next line from end of line
 set whichwrap+=<,h									"Go to previous line from start of line
  
+"No background
 hi! Normal ctermbg=NONE guibg=NONE
 hi! NonText ctermbg=NONE guibg=NONE 
 
@@ -67,6 +68,15 @@ nmap <cr> o<Esc>
 "Tab in normal mode
 nmap <Tab> i<Tab><Esc>l
 
+"Faster way to quit
+nmap <C-w> :q<cr> 
+"Faster way to save the file
+nmap <C-s> :w<cr>
+
+"Turn off line numbers
+nmap <Leader>nnu :set nonumber<cr>
+"Turn on line numbers
+nmap <Leader>nu :set number<cr>
 
 "-------------- Plugins ------------"
 
