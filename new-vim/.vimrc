@@ -28,6 +28,9 @@ set guioptions-=R									"Hide rightscroll bar when split
 
 set whichwrap+=>,l									"Go to next line from end of line
 set whichwrap+=<,h									"Go to previous line from start of line
+ 
+hi! Normal ctermbg=NONE guibg=NONE
+hi! NonText ctermbg=NONE guibg=NONE 
 
 "-------------- Mappings -----------"
 
