@@ -69,7 +69,7 @@ nmap <cr> o<Esc>
 nmap <Tab> i<Tab><Esc>l
 
 "Faster way to quit
-nmap <C-w> :q<cr> 
+nmap <C-w> :q<cr>
 "Faster way to save the file
 nmap <C-s> :w<cr>
 
