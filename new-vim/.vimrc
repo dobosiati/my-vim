@@ -17,7 +17,7 @@ set showtabline=1									"Always show the tabs
 
 set shiftwidth=4
 set tabstop=4
-
+ 
 set t_CO=256										"Use 256 colors. This is useful for Terminal Vim.
 set guioptions=m									"Show menubar 
 set guioptions-=T									"Hide taskbar
@@ -78,6 +78,9 @@ nmap <Leader>nnu :set nonumber<cr>
 "Turn on line numbers
 nmap <Leader>nu :set number<cr>
 
+nmap <Leader>lc :set  listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:·<cr>:set list<cr>
+nmap <Leader>lnc :set list!<cr>
+ 
 "-------------- Plugins ------------"
 
 "/
@@ -121,7 +124,7 @@ set grepprg=ag														"We want to use Ag for the search.
 
 
 
-"----------- Split Management ------"  
+"----------- Split Management ------"
 set splitbelow
 set splitright
 
