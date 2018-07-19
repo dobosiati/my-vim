@@ -64,7 +64,7 @@ nmap <space> i<space><Esc>
 "Delete back in normal mode
 nmap <BS> i<BS><Esc>l
 "New line in normal mode
-nmap <cr> o<Esc> 
+nmap <cr> i<cr><Esc>
 "Tab in normal mode
 nmap <Tab> i<Tab><Esc>l
 
