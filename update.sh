@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Remove update folder if exists
 sudo rm -rf ~/.my-vim/update
@@ -24,16 +24,17 @@ if [ $(stat -c%s ~/.my-vim/update/dependencies.sh) != $(stat -c%s ~/.my-vim/depe
 fi
 
 # Compaires the new and the old colors folder sizes and if they are different than override the old one
-if [ $(du -b ~/.my-vim/update/new-vim/colors | cut -c1-5) != $(du -b ~/.vim/colors | cut -c1-5) ]; then	
+if [ "$(du -b ~/.my-vim/update/new-vim/colors | cut -c1-5)" != "$(du -b ~/.vim/colors | cut -c1-5)" ]; then	
+	echo 1
 	rm ~/.vim/colors/*
 	rsync -r ~/.my-vim/update/new-vim/colors/ ~/.vim/colors	
 fi
 
 # Compaires the new and the old update file sizes and if they are different than override the old one and run it
-if [ $(stat -c%s ~/.my-vim/update/update.sh) != $(stat -c%s ~/.my-vim/update.sh) ]; then	
-	cp ~/.my-vim/update/update.sh ~/.my-vim/update.sh
-	sh ~/.my-vim/update.sh
-fi
+#if [ $(stat -c%s ~/.my-vim/update/update.sh) != $(stat -c%s ~/.my-vim/update.sh) ]; then	
+	#cp ~/.my-vim/update/update.sh ~/.my-vim/update.sh
+	#sh ~/.my-vim/update.sh
+#fi
  
 # Remove update folder if exists
 sudo rm -rf ~/.my-vim/update
