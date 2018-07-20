@@ -25,9 +25,8 @@ fi
 
 # Compaires the new and the old colors folder sizes and if they are different than override the old one
 if [ "du -h ~/.my-vim/new-vim/colors)" != "du -h ~/.vim/colors" ]; then	
-	du -h ~/.my-vim/new-vim/colors
-	du -h ~/.vim/colors
-	echo 1
+	rm ~/.vim/colors/*
+	rsync -r ~/.my-vim/update/new-vim/colors/ ~/.vim/colors	
 fi
 
 # Compaires the new and the old update file sizes and if they are different than override the old one and run it
