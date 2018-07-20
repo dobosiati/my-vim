@@ -10,11 +10,11 @@ git clone https://github.com/dobosiati/my-vim.git ~/.my-vim && ~/.my-vim/setup
 
 ## Update 
 ```
-sh ~/.my-vim/update
+~/.my-vim/update
 ```
  
 ## Remove  
 Removes my-vim and restores the old vim configuration:
 ```
-sh ~/.my-vim/remove
+~/.my-vim/remove
 ```
