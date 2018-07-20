@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Remove new-vim files
 sudo rm -r ~/.vim/*

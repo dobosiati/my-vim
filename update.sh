@@ -31,10 +31,10 @@ if [ "$(du -b ~/.my-vim/update/new-vim/colors | cut -c1-5)" != "$(du -b ~/.vim/c
 fi
 
 # Compaires the new and the old update file sizes and if they are different than override the old one and run it
-#if [ $(stat -c%s ~/.my-vim/update/update.sh) != $(stat -c%s ~/.my-vim/update.sh) ]; then	
-	#cp ~/.my-vim/update/update.sh ~/.my-vim/update.sh
-	#sh ~/.my-vim/update.sh
-#fi
+if [ $(stat -c%s ~/.my-vim/update/update.sh) != $(stat -c%s ~/.my-vim/update.sh) ]; then	
+	cp ~/.my-vim/update/update.sh ~/.my-vim/update.sh
+	sh ~/.my-vim/update.sh
+fi
  
 # Remove update folder if exists
 sudo rm -rf ~/.my-vim/update

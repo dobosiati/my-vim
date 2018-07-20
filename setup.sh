@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Create vimrc file if it is not exist
 touch ~/.vimrc
