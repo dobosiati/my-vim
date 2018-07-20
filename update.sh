@@ -24,11 +24,10 @@ if [ $(stat -c%s ~/.my-vim/update/dependencies.sh) != $(stat -c%s ~/.my-vim/depe
 fi
 
 # Compaires the new and the old colors folder sizes and if they are different than override the old one
-stat -c%s ~/.my-vim/update/new-vim/colors
-stat -c%s ~/.vim/colors 
-if [ $(stat -c%s ~/.my-vim/update/new-vim/colors) != $(stat -c%s ~/.vim/colors) ]; then	
-	rm ~/.vim/colors/*
-	rsync -r ~/.my-vim/update/new-vim/colors/ ~/.vim/colors
+if [ "du -h ~/.my-vim/new-vim/colors)" != "du -h ~/.vim/colors" ]; then	
+	du -h ~/.my-vim/new-vim/colors
+	du -h ~/.vim/colors
+	echo 1
 fi
 
 # Compaires the new and the old update file sizes and if they are different than override the old one and run it
