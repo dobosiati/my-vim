@@ -4,3 +4,4 @@
 command="$1"
 sudo apt-get "$command" ctags
 sudo apt-get "$command" silversearcher-ag
+echo "dep test"

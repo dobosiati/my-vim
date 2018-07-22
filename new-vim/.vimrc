@@ -1,3 +1,4 @@
+"test
 set nocompatible              						"We want the latest Vim settings/options	
 
 so ~/.vim/plugins.vim
