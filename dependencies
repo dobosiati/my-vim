@@ -1,0 +1,6 @@
+#!/bin/bash
+
+#Install or remove dependencies
+command="$1"
+sudo apt-get "$command" ctags
+sudo apt-get "$command" silversearcher-ag

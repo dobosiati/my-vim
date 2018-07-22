@@ -10,8 +10,7 @@ cp -r ~/.my-vim/old-vim/* ~/.vim
 cp ~/.my-vim/old-vim/.vimrc ~/.vimrc
 
 # Remove dependencies
-sudo apt-get remove ctags
-sudo apt-get remove silversearcher-ag
+~/.my-vim/dependencies remove
 
 # Remove folder
 sudo rm -r ~/.my-vim

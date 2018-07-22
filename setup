@@ -16,7 +16,7 @@ mv ~/.vimrc ~/.my-vim/old-vim/.vimrc
 cp ~/.my-vim/new-vim/.vimrc ~/.vimrc
 
 # Install dependencies
-sh ~/.my-vim/dependencies.sh
+~/.my-vim/dependencies install
 
 # Install plugins
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
