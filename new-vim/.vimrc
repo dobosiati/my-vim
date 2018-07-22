@@ -51,13 +51,11 @@ nmap <Leader><space> :nohlsearch<cr>
 "Open new tab
 nmap <C-t> :tabedit<cr>
 
-"Paste from system clipboard
+"Paste from system clipboard in gvim
 nmap <Leader>v "+gP
-
-"Copy from system clipboard
+"Copy from system clipboard in gvim
 vmap <Leader>y "+y
-
-"Cut from system clipboard
+"Cut from system clipboard in gvim
 vmap <Leader>x "+x
 
 "Add space in normal mode
