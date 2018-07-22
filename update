@@ -9,7 +9,6 @@ git clone https://github.com/dobosiati/my-vim.git ~/.my-vim/updates
 # Compaires the new and the old vimrc file sizes and if they are different than override the old one
 if [ $(stat -c%s ~/.my-vim/updates/new-vim/.vimrc) != $(stat -c%s ~/.vimrc) ]; then
 	cp ~/.my-vim/updates/new-vim/.vimrc ~/.vimrc
-	echo "vim up"
 fi
 
 # Compaires the new and the old plugins file sizes and if they are different than override the old one and installs the plugins
@@ -22,7 +21,6 @@ fi
 if [ $(stat -c%s ~/.my-vim/updates/dependencies) != $(stat -c%s ~/.my-vim/dependencies) ]; then
 	cp ~/.my-vim/updates/dependencies ~/.my-vim/dependencies
  	~/.my-vim/dependencies install
-	echo "test dep from up"
 fi
 
 # Compaires the new and the old colors folder sizes and if they are different than override the old one
@@ -35,7 +33,6 @@ fi
 if [ $(stat -c%s ~/.my-vim/updates/update) != $(stat -c%s ~/.my-vim/update) ]; then
 	cp ~/.my-vim/updates/update ~/.my-vim/update
 	~/.my-vim/update
-	echo "test update"
 fi
  
 # Remove update folder if exists
