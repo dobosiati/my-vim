@@ -1,39 +1,39 @@
 #!/bin/bash
 
 # Remove update folder if exists
-sudo rm -rf ~/.my-vim/update
+sudo rm -rf ~/.my-vim/updates
 
 # Git clone the latest my-vim version
-git clone https://github.com/dobosiati/my-vim.git ~/.my-vim/update
+git clone https://github.com/dobosiati/my-vim.git ~/.my-vim/updates
 
 # Compaires the new and the old vimrc file sizes and if they are different than override the old one
-if [ $(stat -c%s ~/.my-vim/update/new-vim/.vimrc) != $(stat -c%s ~/.vimrc) ]; then	
-	cp ~/.my-vim/update/new-vim/.vimrc ~/.vimrc
+if [ $(stat -c%s ~/.my-vim/updates/new-vim/.vimrc) != $(stat -c%s ~/.vimrc) ]; then
+	cp ~/.my-vim/updates/new-vim/.vimrc ~/.vimrc
 fi
 
 # Compaires the new and the old plugins file sizes and if they are different than override the old one and installs the plugins
-if [ $(stat -c%s ~/.my-vim/update/new-vim/plugins.vim) != $(stat -c%s ~/.vim/plugins.vim) ]; then	
-	cp ~/.my-vim/update/new-vim/plugins.vim ~/.vim/plugins.vim
+if [ $(stat -c%s ~/.my-vim/updates/new-vim/plugins.vim) != $(stat -c%s ~/.vim/plugins.vim) ]; then
+	cp ~/.my-vim/updates/new-vim/plugins.vim ~/.vim/plugins.vim
 	vim -c 'PluginInstall' -c 'qa!'
 fi
   
 # Compaires the new and the old dependencies file sizes and if they are different than override the old one and run it
-if [ $(stat -c%s ~/.my-vim/update/dependencies) != $(stat -c%s ~/.my-vim/dependencies) ]; then	
-	cp ~/.my-vim/update/dependencies ~/.my-vim/dependencies
+if [ $(stat -c%s ~/.my-vim/updates/dependencies) != $(stat -c%s ~/.my-vim/dependencies) ]; then
+	cp ~/.my-vim/updates/dependencies ~/.my-vim/dependencies
  	~/.my-vim/dependencies install
 fi
 
 # Compaires the new and the old colors folder sizes and if they are different than override the old one
-if [ "$(du -b ~/.my-vim/update/new-vim/colors | cut -c1-5)" != "$(du -b ~/.vim/colors | cut -c1-5)" ]; then	
+if [ "$(du -b ~/.my-vim/updates/new-vim/colors | cut -c1-5)" != "$(du -b ~/.vim/colors | cut -c1-5)" ]; then
 	rm ~/.vim/colors/*
-	rsync -r ~/.my-vim/update/new-vim/colors/ ~/.vim/colors	
+	rsync -r ~/.my-vim/updates/new-vim/colors/ ~/.vim/colors
 fi
 
 # Compaires the new and the old update file sizes and if they are different than override the old one and run it
-if [ $(stat -c%s ~/.my-vim/update/update) != $(stat -c%s ~/.my-vim/update) ]; then	
-	cp ~/.my-vim/update/update ~/.my-vim/update
+if [ $(stat -c%s ~/.my-vim/updates/update) != $(stat -c%s ~/.my-vim/update) ]; then
+	cp ~/.my-vim/updates/update ~/.my-vim/update
 	~/.my-vim/update
 fi
  
 # Remove update folder if exists
-sudo rm -rf ~/.my-vim/update
+sudo rm -rf ~/.my-vim/updates
