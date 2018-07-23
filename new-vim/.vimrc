@@ -118,6 +118,9 @@ nmap <Leader>gs :Gsearch<cr>
 "Search and replace between files
 nmap <Leader>gr :Greplace<cr>
 
+"Sortcut for replacing in file
+nmap <Leader>r :%s/
+
 "/
 "/ Greplace.vim
 "/
