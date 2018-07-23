@@ -77,9 +77,20 @@ nmap <Leader>nnu :set nonumber<cr>
 "Turn on line numbers
 nmap <Leader>nu :set number<cr>
 
+"Show hidden characters
 nmap <Leader>lc :set  listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:·<cr>:set list<cr>
+"Hide hidden characters
 nmap <Leader>lnc :set list!<cr>
- 
+
+"Move this line up
+nmap <C-A-up> :m .-2<CR>==
+imap <C-A-up> <Esc>:m .-2<CR>==gi
+vmap <C-A-up> :m '<-2<CR>gv=gv
+"Move this line down
+nmap <C-A-down> :m .+1<CR>==
+imap <C-A-down> <Esc>:m .+1<CR>==gi
+vmap <C-A-down> :m '>+1<CR>gv=gv
+
 "-------------- Plugins ------------"
 
 "/
