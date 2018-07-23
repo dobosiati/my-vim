@@ -113,8 +113,10 @@ set incsearch
 
 "Search content between files
 nmap <Leader>s :Ag<space>
+"Search replace between files and able to modify those contents
+nmap <Leader>gs :Gsearch<cr>
 "Search and replace between files
-nmap <Leader>r :Greplace<cr>
+nmap <Leader>gr :Greplace<cr>
 
 "/
 "/ Greplace.vim
