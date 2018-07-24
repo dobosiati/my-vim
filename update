@@ -29,6 +29,12 @@ if [ "$(du -b ~/.my-vim/updates/new-vim/colors | cut -c1-5)" != "$(du -b ~/.vim/
 	rsync -r ~/.my-vim/updates/new-vim/colors/ ~/.vim/colors
 fi
 
+# Compaires the new and the old snippets folder sizes and if they are different than override the old one
+if [ "$(du -b ~/.my-vim/updates/new-vim/snippets | cut -c1-5)" != "$(du -b ~/.vim/snippets | cut -c1-5)" ]; then
+	rm ~/.vim/snippets/*
+	rsync -r ~/.my-vim/updates/new-vim/snippets/ ~/.vim/snippets
+fi
+
 # Compaires the new and the old update file sizes and if they are different than override the old one and run it
 if [ $(stat -c%s ~/.my-vim/updates/update) != $(stat -c%s ~/.my-vim/update) ]; then
 	cp ~/.my-vim/updates/update ~/.my-vim/update
