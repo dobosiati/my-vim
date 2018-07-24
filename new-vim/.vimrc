@@ -143,11 +143,15 @@ set grepprg=ag														"We want to use Ag for the search.
 set splitbelow
 set splitright
 
+"Switching between windows
 nmap <C-J> <C-W><C-J>
 nmap <C-K> <C-W><C-K>
 nmap <C-H> <C-W><C-H>
 nmap <C-L> <C-W><C-L>
-
+nmap <C-down> <C-W><C-J>
+nmap <C-up> <C-W><C-K>
+nmap <C-left> <C-W><C-H>
+nmap <C-right> <C-W><C-L>
 
 
 "------------ Auto-Commands --------"
