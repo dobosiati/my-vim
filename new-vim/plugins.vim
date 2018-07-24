@@ -17,6 +17,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'posva/vim-vue'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'jwalton512/vim-blade'
+Plugin 'terryma/vim-multiple-cursors'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
