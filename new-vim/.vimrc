@@ -70,7 +70,8 @@ nmap <Tab> i<Tab><Esc>l
 "Faster way to quit
 nmap <C-w><C-w> :q<cr>
 "Faster way to save the file
-nmap <C-s> :w<cr>
+nmap <C-s><C-s> :w<cr>
+imap <C-s><C-s> <Esc>:w<cr>il
 
 "Turn off line numbers
 nmap <Leader>nnu :set nonumber<cr>
