@@ -77,10 +77,10 @@ nmap <C-w><C-w> :q<cr>
 nmap <C-s> :w<cr>
 imap <C-s> <Esc>:w<cr>i<right>
 
-"Turn off line numbers
-nmap <Leader>nnu :set nonumber<cr>
-"Turn on line numbers
-nmap <Leader>nu :set number<cr>
+"Turn off line numbers and turn on margin
+nmap <Leader>nnu :set nonumber<cr> :set foldcolumn=1<cr>
+"Turn on line numbers and turn off margin
+nmap <Leader>nu :set number<cr> :set foldcolumn=0<cr>
 "Turn on margin
 nmap <Leader>m :set foldcolumn=1<cr>
 "Turn off margin
