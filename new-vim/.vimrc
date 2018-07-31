@@ -10,7 +10,7 @@ colorscheme minimalist
 set backspace=indent,eol,start						"Make backspace behave like every other editor.
 let mapleader=','									"The default leader is \m but a comma is much better.
 
-set number											"Lets activate line numbers.
+"set number											"Lets activate line numbers.
 set linespace=10									"Macvim-specific line-height.
 set noerrorbells visualbell t_vb=					"No bells
 
