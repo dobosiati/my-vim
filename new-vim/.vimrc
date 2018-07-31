@@ -11,6 +11,10 @@ set backspace=indent,eol,start						"Make backspace behave like every other edit
 let mapleader=','									"The default leader is \m but a comma is much better.
 
 "set number											"Lets activate line numbers.
+
+hi! link FoldColumn Normal	
+set foldcolumn=1									"Adding margin
+
 set linespace=10									"Macvim-specific line-height.
 set noerrorbells visualbell t_vb=					"No bells
 
@@ -77,6 +81,10 @@ imap <C-s> <Esc>:w<cr>i<right>
 nmap <Leader>nnu :set nonumber<cr>
 "Turn on line numbers
 nmap <Leader>nu :set number<cr>
+"Turn on margin
+nmap <Leader>m :set foldcolumn=1<cr>
+"Turn off margin
+nmap <Leader>nm :set foldcolumn=0<cr>
 
 "Show hidden characters
 nmap <Leader>lc :set  listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:·<cr>:set list<cr>
