@@ -92,6 +92,9 @@ nmap <C-A-down> :m .+1<CR>==
 imap <C-A-down> <Esc>:m .+1<CR>==gi
 vmap <C-A-down> :m '>+1<CR>gv=gv
 
+"Code autoformat
+nmap <F3> :Autoformat<CR>
+
 "-------------- Plugins ------------"
 
 "/
