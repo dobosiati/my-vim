@@ -78,9 +78,9 @@ nmap <C-s> :w<cr>
 imap <C-s> <Esc>:w<cr>i<right>
 
 "Turn off line numbers and turn on margin
-nmap <Leader>nnu :set nonumber<cr> :set foldcolumn=1<cr>
+nmap <Leader>nnu :set nonumber<cr>:set foldcolumn=1<cr>
 "Turn on line numbers and turn off margin
-nmap <Leader>nu :set number<cr> :set foldcolumn=0<cr>
+nmap <Leader>nu :set number<cr>:set foldcolumn=0<cr>
 "Turn on margin
 nmap <Leader>m :set foldcolumn=1<cr>
 "Turn off margin
@@ -102,6 +102,9 @@ vmap <C-A-down> :m '>+1<CR>gv=gv
 
 "Code autoformat
 nmap <F3> :Autoformat<CR>
+
+"Switching between colorshemes (light or dark)
+"nmap <Leader>cd :!vim -c '%s/"colorscheme lightning/colorscheme lightning/g|wq' ~/.vimrc<CR>
 
 "-------------- Plugins ------------"
 
