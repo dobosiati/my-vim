@@ -12,6 +12,8 @@ let mapleader=','									"The default leader is \m but a comma is much better.
 
 "set number											"Lets activate line numbers.
 
+set autochdir                                       "Always change to the current file's directory
+
 hi! link FoldColumn Normal	
 set foldcolumn=1									"Adding margin
 
