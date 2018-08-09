@@ -199,3 +199,4 @@ function! NERDCommenter_after()
 		let g:ft = ''
 		syntax sync fromstart
 	endif
+endfunction
