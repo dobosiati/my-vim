@@ -197,5 +197,5 @@ function! NERDCommenter_after()
 	if g:ft == 'vue'
 		setf vue
 		let g:ft = ''
+		syntax sync fromstart
 	endif
-endfunction
