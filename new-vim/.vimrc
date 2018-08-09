@@ -12,7 +12,9 @@ let mapleader=','									"The default leader is \m but a comma is much better.
 
 "set number											"Lets activate line numbers.
 
-"set autochdir                                       "Always change to the current file's directory
+"set autochdir                                      "Always change to the current file's directory
+
+let g:vue_disable_pre_processors=1					"Speed up vim plugin
 
 hi! link FoldColumn Normal
 set foldcolumn=1									"Adding margin
