@@ -1,4 +1,4 @@
-set nocompatible              						"We want the latest Vim settings/options	
+set nocompatible									"We want the latest Vim settings/options
 
 so ~/.vim/plugins.vim
 
@@ -14,7 +14,7 @@ let mapleader=','									"The default leader is \m but a comma is much better.
 
 "set autochdir                                       "Always change to the current file's directory
 
-hi! link FoldColumn Normal	
+hi! link FoldColumn Normal
 set foldcolumn=1									"Adding margin
 
 set linespace=10									"Macvim-specific line-height.
@@ -24,9 +24,9 @@ set showtabline=1									"Always show the tabs
 
 set shiftwidth=4
 set tabstop=4
- 
+
 set t_CO=256										"Use 256 colors. This is useful for Terminal Vim.
-set guioptions=m									"Show menubar 
+set guioptions=m									"Show menubar
 set guioptions-=T									"Hide taskbar
 set guioptions-=l									"Hide leftscroll bar
 set guioptions-=L									"Hide leftscroll bar when split
@@ -35,10 +35,10 @@ set guioptions-=R									"Hide rightscroll bar when split
 
 set whichwrap+=>,l									"Go to next line from end of line
 set whichwrap+=<,h									"Go to previous line from start of line
- 
+
 "No background
 "hi! Normal ctermbg=NONE guibg=NONE
-"hi! NonText ctermbg=NONE guibg=NONE 
+"hi! NonText ctermbg=NONE guibg=NONE
 
 "-------------- Mappings -----------"
 
@@ -170,7 +170,6 @@ nmap <C-up> <C-W><C-K>
 nmap <C-left> <C-W><C-H>
 nmap <C-right> <C-W><C-L>
 
-
 "------------ Auto-Commands --------"
 
 "Automatically source the Vimrc file on save.
@@ -178,4 +177,25 @@ nmap <C-right> <C-W><C-L>
 augroup autosourcing
 	autocmd!
 	autocmd BufWritePost .vimrc source %
-augroup END
+augroup ENDo
+	
+"Commenter for vuejs component
+let g:ft = ''
+function! NERDCommenter_before()
+	if &ft == 'vue'
+		let g:ft = 'vue'
+		let stack = synstack(line('.'), col('.'))
+		if len(stack) > 0
+			let syn = synIDattr((stack)[0], 'name')
+			if len(syn) > 0
+				exe 'setf ' . substitute(tolower(syn), '^vue_', '', '')
+			endif
+		endif
+	endif
+endfunction
+function! NERDCommenter_after()
+	if g:ft == 'vue'
+		setf vue
+		let g:ft = ''
+	endif
+endfunction
