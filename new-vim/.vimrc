@@ -10,7 +10,7 @@ colorscheme minimalist
 set backspace=indent,eol,start						"Make backspace behave like every other editor.
 let mapleader=','									"The default leader is \m but a comma is much better.
 
-"set number											"Lets activate line numbers.
+set number											"Lets activate line numbers.
 
 "set autochdir                                      "Always change to the current file's directory
 
